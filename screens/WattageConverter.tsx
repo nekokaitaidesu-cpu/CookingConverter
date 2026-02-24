@@ -244,6 +244,7 @@ export default function WattageConverter() {
               />
               <Text style={styles.manualLabel}>分</Text>
             </View>
+            <Text style={styles.manualSep}>:</Text>
             <View style={styles.manualGroup}>
               <TextInput
                 style={styles.manualInput}
@@ -404,14 +405,15 @@ const styles = StyleSheet.create({
   // manual input
   manualRow: {
     flexDirection: 'row',
-    gap: 16,
+    alignItems: 'center',
     marginBottom: 14,
+    gap: 8,
   },
   manualGroup: {
     flex: 1,
     flexDirection: 'row',
     alignItems: 'center',
-    gap: 8,
+    gap: 6,
   },
   manualInput: {
     flex: 1,
@@ -424,8 +426,10 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     textAlign: 'center',
     paddingVertical: 10,
+    minWidth: 0,
   },
-  manualLabel: { color: '#ccc', fontSize: 16, fontWeight: '600' },
+  manualLabel: { color: '#ccc', fontSize: 16, fontWeight: '600', flexShrink: 0 },
+  manualSep: { color: '#FF6B35', fontSize: 24, fontWeight: 'bold', flexShrink: 0 },
   calcBtn: {
     backgroundColor: '#FF6B35',
     borderRadius: 12,
